@@ -38,9 +38,9 @@ window.onscroll = function(){
 } 
 
 function descargarPDF() {
-    var nombreArchivo = "certificado.pdf";
+    var nombreArchivo = "RenatoAlfaro-CV";
     var urlPDF = "Imagenes/" + nombreArchivo;
-  
+
     var enlace = document.createElement("a");
     enlace.href = urlPDF;
     enlace.download = nombreArchivo;
@@ -48,4 +48,4 @@ function descargarPDF() {
     document.body.appendChild(enlace);
     enlace.click();
     document.body.removeChild(enlace);
-  }
+}
