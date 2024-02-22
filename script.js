@@ -49,3 +49,69 @@ function descargarPDF() {
     enlace.click();
     document.body.removeChild(enlace);
 }
+
+/* document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var nombre = document.getElementsByName('nombre')[0].value;
+    var telefono = document.getElementsByName('telefono')[0].value;
+    var email = document.getElementsByName('email')[0].value;
+    var tema = document.getElementsByName('tema')[0].value;
+    var mensaje = document.getElementsByName('mensaje')[0].value;
+
+    if (!nombre || !email  || !mensaje || !tema || !telefono) {
+        alert('Por favor, completa todos los campos');
+        return;
+    }
+
+    if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(email)) {
+        alert('Por favor, introduce un email válido');
+        return;
+    }
+    
+    this.submit();
+});
+ */
+function sendMail() {
+    var nombre = document.getElementsByName('nombre')[0].value;
+    var email = document.getElementsByName('email')[0].value;
+    var mensaje = document.getElementsByName('mensaje')[0].value;
+    var telefono = document.getElementsByName('telefono')[0].value;
+    var tema = document.getElementsByName('tema')[0].value;
+    if (nombre !== ""
+        && email !== ""
+        && mensaje !== "") {
+        var json_object = {
+            'nombre': nombre,
+            'email': email,
+            'mensaje': mensaje,
+            'telefono': telefono,
+            'tema': tema
+        };
+        fetch('https://w3cmz5xs6d.execute-api.us-east-2.amazonaws.com/api/contacto', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(json_object)
+        })
+        .then(function(response) {
+            if (response.ok) {
+                document.getElementsByName('nombre')[0].value = "";
+                document.getElementsByName('email')[0].value = "";
+                document.getElementsByName('mensaje')[0].value = "";
+                document.getElementsByName('telefono')[0].value = "";
+                document.getElementsByName('tema')[0].value = "";
+
+                console.log('Tu comentario fue enviado correctamente.');
+                //toastr.success('Tu comentario fue enviado correctamente.', { timeOut: 5000 });
+            } else {
+                console.log('Tuvimos un problema al recibir su solicitud, Favor de volver a intentar en unos minutos.');
+                //toastr.error('Tuvimos un problema al recibir su solicitud, Favor de volver a intentar en unos minutos.');
+            }
+        })
+        .catch(function(error) {
+            console.log('Error:', error);
+        });
+    }
+}

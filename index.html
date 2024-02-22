@@ -67,11 +67,11 @@
                         </li>
                         <li>
                             <strong>Teléfono</strong>
-                            +56 987654321
+                            +56 986701478
                         </li>
                         <li>
                             <strong>Email</strong>
-                            renato.alfaro@loneliness.es
+                            sebastiangiron25@gmail.com
                         </li>
                         <li>
                             <strong>Website</strong>
@@ -257,16 +257,19 @@
             <div class="fila">
                 <!-- Formulario -->
                 <div class="col">
-                    <input type="text" placeholder="Tú Nombre">
-                    <input type="text" placeholder="Número telefónico">
-                    <input type="text" placeholder="Dirección de correo">
-                    <input type="text" placeholder="Tema">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
-                    <button>
-                        Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
-                        <span class="overlay"></span>
-                    </button>
+                    <form onsubmit="sendMail();">
+                        <input type="text" name="nombre" placeholder="Nombre">
+                        <input type="text" name="telefono" placeholder="Teléfono">
+                        <input type="email" name="email" placeholder="Email">
+                        <input type="text" name="tema" placeholder="Tema">
+                        <textarea name="mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                        <button type="submit">
+                            Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
+                            <span class="overlay"></span>
+                        </button>
+                    </form>
                 </div>
+
                 <!-- Mapa -->
                 <div class="col">
                     <img src="Imagenes/Maps.png" alt="">
@@ -302,7 +305,7 @@
             <a href="https://www.linkedin.com/in/renato-sebasti%C3%A1n-alfaro-giron-1459b4251/"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
     </footer>
-
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
