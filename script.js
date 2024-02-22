@@ -38,7 +38,7 @@ window.onscroll = function(){
 } 
 
 function descargarPDF() {
-    var nombreArchivo = "RenatoAlfaro-CV";
+    var nombreArchivo = "RenatoAlfaro-CV.pdf";
     var urlPDF = "Imagenes/" + nombreArchivo;
 
     var enlace = document.createElement("a");
@@ -50,7 +50,7 @@ function descargarPDF() {
     document.body.removeChild(enlace);
 }
 
-/* document.getElementById('contactForm').addEventListener('submit', function(event) {
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
     var nombre = document.getElementsByName('nombre')[0].value;
@@ -71,7 +71,7 @@ function descargarPDF() {
     
     this.submit();
 });
- */
+
 function sendMail() {
     var nombre = document.getElementsByName('nombre')[0].value;
     var email = document.getElementsByName('email')[0].value;
