@@ -50,27 +50,6 @@ function descargarPDF() {
     document.body.removeChild(enlace);
 }
 
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    var nombre = document.getElementsByName('nombre')[0].value;
-    var telefono = document.getElementsByName('telefono')[0].value;
-    var email = document.getElementsByName('email')[0].value;
-    var tema = document.getElementsByName('tema')[0].value;
-    var mensaje = document.getElementsByName('mensaje')[0].value;
-
-    if (!nombre || !email  || !mensaje || !tema || !telefono) {
-        alert('Por favor, completa todos los campos');
-        return;
-    }
-
-    if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(email)) {
-        alert('Por favor, introduce un email válido');
-        return;
-    }
-    
-    this.submit();
-});
 
 function sendMail() {
     var nombre = document.getElementsByName('nombre')[0].value;
@@ -88,7 +67,7 @@ function sendMail() {
             'telefono': telefono,
             'tema': tema
         };
-        fetch('https://w3cmz5xs6d.execute-api.us-east-2.amazonaws.com/api/contacto', {
+        fetch(API_URL, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
