@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+    margin: 0;
+    padding: 0;
+}
+.contenedor-header {
+    min-width: 450px;
+    background: #1e2326;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    text-align: center;
+    padding: 20px;
+}
+.h1{
+    font-family: 'Righteous';
+    font-size: 36px;
+    color: #fff;
+    text-decoration: none;
+}
+section {
+    min-width: 450px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.contenido-seccion {
+    background-color: #252A2E;
+    margin: 0 auto;
+    padding: 20px;
+}
+.fila {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.col {
+    flex: 1 0 calc(33.33% - 20px); /* 33.33% - margen */
+    box-sizing: border-box;
+    margin: 10px;
+    display: flex; /* Agregar */
+    justify-content: center; /* Agregar */
+    align-items: center; /* Agregar */
+    flex-direction: column; /* Agregar */
+}
+.col img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.col h3, .col p {
+    margin: 0;
+}
+
+.col .boton-comprar {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px; /* Agrega un poco de espacio alrededor del texto del botón */
+    border-radius: 5px; /* Agrega bordes redondeados al botón */
+    transition: background-color 0.3s;
+}
+
+.col .boton-comprar:hover {
+    background-color: #0056b3;
+}
+.col div {
+    text-align: center; /* Centra el texto */
+    padding: 10px; /* Agrega un poco de espacio alrededor del texto */
+    background-color: #f8f8f8; /* Agrega un color de fondo */
+    border-radius: 5px; /* Agrega bordes redondeados */
+}
+
+.col h3 {
+    color: #333; /* Cambia el color del título */
+    margin-bottom: 10px; /* Agrega un poco de espacio debajo del título */
+}
+
+.col p {
+    color: #666; /* Cambia el color del párrafo */
+    margin-bottom: 20px; /* Agrega un poco de espacio debajo del párrafo */
+}
+
+
+footer{
+    background: #1e2326;
+    color: #fff;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    min-width: 450px;
+    width: 100%;
+}
+footer .redes{
+    margin-bottom: 20px;
+}
+footer .redes a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
